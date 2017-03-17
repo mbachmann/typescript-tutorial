@@ -40,29 +40,29 @@ For npm-users:
 
 <br/>
 
-## Compile and run from console
+## Transpile and run from console
 
 Clone the git-Repo
 
     git clone https://github.engineering.zhaw.ch/bacn/ase2-typescript-01
     cd ase2-typescript-01
 
-At the command line, run the TypeScript compiler:
+At the command line, run the TypeScript transpiler:
 
 
     tsc 00-run.ts
 
-The result will be a file 00-run.js which contains the same JavaScript. Because of the
-import statement of the files in the scr folder, all typescript file will get
-compiled.
+The result will be a file **00-run.js** which contains the transpiled JavaScript. Because of the
+import statement of the files from the **src folder**, all typescript file will get
+transpiled.
 
-Now we are ready to run the compile JavaScript file with node:
+Now we are ready to run the transpiled JavaScript file with **node**:
 
     node 00-run.js
 
 <br/>
 
-## Compile and run with WebStorm
+## Transpile and run with WebStorm
 
 Install Webstorm from here
 
