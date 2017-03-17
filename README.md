@@ -1,6 +1,6 @@
-# ase02-typescript-sample
+# ase2-typescript-01
 
-Contains source code samples.
+Contains source code snippets of the TypeScript slides.
 The files numbers in the src folder correspond with the chapter numbers
 of the slides.
 
@@ -72,13 +72,15 @@ https://confluence.jetbrains.com/display/WI/WebStorm+EAP
 
 * Open Webstrom and press Open [File Open]
 * Navigate to the folder with the typescript files
-* In the Webstrom project view open the file 00-run.ts
-* At the top right corner in the editor window press [OK] to compile TypeScript to JavaScrit
+* In the Webstrom project view open the file **00-run.ts**
+* At the **top right corner** in the editor window press **[OK]** to compile TypeScript to JavaScript
 * Klick in the Menu on Run->Run...
 * In the dialog press [Edit Run Configurations]
-* In the name field enter a title or this run configuration
-* In the JavaScript field enter 00-run.js
+* In the Edit Run Configuration dialog press **[+]** and select **node.js**
+* In the **name field** enter a title
+* In the JavaScript field enter **00-run.js**
 * Click [Apply] and [Run]
+* The console shows the output of the different code snippets
 
 <br/>
 
