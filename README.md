@@ -96,11 +96,13 @@ Press the compile button in the TypeScript tool window. You can recognize that a
 * In the **name field** enter a title
 * In the JavaScript field choose the file  **00-run.js**
 
+![./assets/run-config-node.png](./assets/run-config-node.png)
+
+
 ### Run the compiled JavaScript file
 * Click [Apply] and [Run]
 * The console shows the output of the different code snippets
 
 <br/>
 
-![./assets/run-config-node.png](./assets/run-config-node.png)
 
