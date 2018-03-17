@@ -82,19 +82,21 @@ In the WebStrom menu choose View->Tool windows->TypeScript
 
 Press the compile button in the TypeScript tool window. You can recognize that all *ts files get an arrow.
 
-## Run the TypeScript files with the Webstorm
+## Run the TypeScript files with Webstorm
 
 * Open Webstrom and press Open [File Open]
 * Navigate to the folder with the typescript files
 * In the Webstrom project view open the file **00-run.ts**
 
 
-## Create a run configuration
+### Create a run configuration
 * Klick in the Menu on Run->Run...
 * In the dialog press [Edit Run Configurations]
 * In the Edit Run Configuration dialog press **[+]** and select **node.js**
 * In the **name field** enter a title
 * In the JavaScript field choose the file  **00-run.js**
+
+### Run the compiled JavaScript file
 * Click [Apply] and [Run]
 * The console shows the output of the different code snippets
 
