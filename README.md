@@ -66,22 +66,39 @@ Now we are ready to run the transpiled JavaScript file with **node**:
 
 Install Webstorm from here
 
-https://confluence.jetbrains.com/display/WI/WebStorm+EAP
+https://confluence.jetbrains.com/display/WI/WebStorm+EAP 
 
-** Run the TypeScript files with the Webstorm
+## Enable the TypeScript Service
+
+Open the Properties window and filter for TypeScript
+
+![./assets/webstrom-typescript-service-properties.png](./assets/webstrom-typescript-service-properties.png)
+
+## Open the TypeScript Tool Window and Compile (Transpile to js)
+
+In the WebStrom menu choose View->Tool windows->TypeScript
+
+![./assets/webstrom-typescript-tool-window.png](./assets/webstrom-typescript-tool-window.png)
+
+Press the compile button in the TypeScript tool window. You can recognize that all *ts files get an arrow.
+
+## Run the TypeScript files with the Webstorm
 
 * Open Webstrom and press Open [File Open]
 * Navigate to the folder with the typescript files
 * In the Webstrom project view open the file **00-run.ts**
-* At the **top right corner** in the editor window press **[OK]** to compile TypeScript to JavaScript
+
+
+## Create a run configuration
 * Klick in the Menu on Run->Run...
 * In the dialog press [Edit Run Configurations]
 * In the Edit Run Configuration dialog press **[+]** and select **node.js**
 * In the **name field** enter a title
-* In the JavaScript field enter **00-run.js**
+* In the JavaScript field choose the file  **00-run.js**
 * Click [Apply] and [Run]
 * The console shows the output of the different code snippets
 
 <br/>
 
 ![./assets/run-config-node.png](./assets/run-config-node.png)
+
