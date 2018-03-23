@@ -1,7 +1,7 @@
 # ase2-typescript-01
 
 Contains source code snippets of the TypeScript slides.
-The files numbers in the src folder correspond with the chapter numbers
+The file numbers in the src folder are corresponding with the chapter numbers
 of the slides.
 
 <br/>
@@ -20,10 +20,16 @@ of the slides.
 * 10-Classes
 * 11-Decorators
 * 12-Destructing (Zerlegen)
+* 13-Promise
+* 14-Enums
 
 <br/>
 
 ## Install Typescript
+
+To run these code samples download Node.js from https://nodejs.org (use the latest version) and install it.
+Then clone or download this repo into any directory on your computer.
+In the command window, change into this directory .
 
 **Prerequisites:**
 
@@ -34,18 +40,21 @@ of the slides.
 
 **Installation**
 
+Clone the git-Repo
+
+    git clone https://github.engineering.zhaw.ch/bacn/ase2-typescript-01
+    cd ase2-typescript-01
+
 For npm-users:
 
+    npm install
     npm install -g typescript
 
 <br/>
 
 ## Transpile and run from console
 
-Clone the git-Repo
 
-    git clone https://github.engineering.zhaw.ch/bacn/ase2-typescript-01
-    cd ase2-typescript-01
 
 At the command line, run the TypeScript transpiler:
 

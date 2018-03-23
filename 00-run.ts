@@ -1,6 +1,6 @@
 import {variables} from "./src/01-variables";
 import {types} from "./src/02-types";
-import {templateStrings} from "./src/03-template-strrings";
+import {templateStrings} from "./src/03-template-strings";
 import {objects} from "./src/04-objects";
 import {functions} from "./src/05-functions";
 import {thisContext} from "./src/06-this";
@@ -10,6 +10,8 @@ import {closures} from "./src/09-closures";
 import {classes} from "./src/10-classes";
 import {decorators} from "./src/11-decorators";
 import {destructing} from "./src/12-destructing";
+import {testPromise} from "./src/13-promises";
+import {testEnums} from "./src/14-enums";
 
 /**
  * Created by MBach on 14.03.2017.
@@ -30,5 +32,8 @@ function run() {
     classes();
     decorators();
     destructing();
+    testPromise();
+    testEnums();
+
 
 }
