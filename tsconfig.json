@@ -1,12 +1,18 @@
-{
-  "compilerOptions": {
-    "module": "commonjs",
-    "target": "es5",
-    "sourceMap": true,
-    "experimentalDecorators": true
-  },
-  "exclude": [
-    "node_modules"
-  ]
+{      "compilerOptions": {
+        "sourceMap": true,
+        "baseUrl": ".",
+        "noEmitOnError": true,
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "experimentalDecorators": true,
+        "target": "es5",
+        "watch":false,
+        "typeRoots": [
+            "node_modules/@types"
+        ],
+        "lib": ["es2017",
+                "dom"]       
+    }, 
+       "exclude":  ["node_modules",
+                    "src/hello-world-ts-jquery"]  
 }
-

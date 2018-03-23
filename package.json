@@ -1,0 +1,17 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "TypeScript Tutorial",
+  "scripts": {
+    "tsc": "tsc -version && tsc -w",
+    "tslint": "tslint"
+  },
+  "author": "Mba",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jquery": "^2.0.41",
+    "@types/jqueryui": "^1.11.32",
+    "typescript": "^2.7.2",
+    "tslint": "^5.3.2"
+  }
+}
