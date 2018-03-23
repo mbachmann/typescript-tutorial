@@ -28,5 +28,11 @@ export function higherOrderFunctions () {
     let myAdder = createAdder();
     console.log(myAdder(2, 3));
 
+    // not higher order
+    let testFatArrow = (a,b) => {
+        return a + b;
+    }
+
+    console.log(testFatArrow(2, 3));
 
 }
