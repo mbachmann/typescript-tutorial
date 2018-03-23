@@ -32,7 +32,7 @@ class Auction{
 }
 
 function createAuction(auction: Auction){
-    console.log(`Sending Motor Bike Auction to  ${auction.action} ${auction.name} value of ${auction.value}`);
+    console.log(`Transaction: Motor Bike Auction to "${auction.action} ${auction.name}" value of ${auction.value}`);
 }
 
 

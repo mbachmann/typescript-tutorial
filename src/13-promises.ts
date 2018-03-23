@@ -47,7 +47,7 @@ function getBids(customer){
 export function testPromise() {
     getAuctions()
 
-        .then((auction) => {console.log("\n-> Result from Promise: Got Auctions" + auction);return auction;})
+        .then((auction) => {console.log("\n-> Result from Promise: Got Auctions " + auction);return auction;})
         .then((auction) => getBids(auction))
         .then((bid) => console.log(bid))
         .catch((err) => console.error(err));
