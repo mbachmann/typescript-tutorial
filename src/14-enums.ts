@@ -19,7 +19,7 @@ export function testEnums() {
  }*/
 
 // String enums
-const enum Action{
+const enum Action {
     buy = 'BUY',
     sell = 'SELL'
 }

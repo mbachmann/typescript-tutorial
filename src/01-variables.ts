@@ -43,7 +43,7 @@ export function variables () {
     // Variables - Primitive types - Call by Value
     let a = 'Hello World';
     let b = a; // Only value is copied
-    let c = 4;
+    a = '4';
 
     console.log(b);
     // => 'Hello World'
