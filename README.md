@@ -238,7 +238,7 @@ Iterate through the array members with:
     });
 ```
 
-## Task#01 - Date Object - ex02.ts
+## Task#02 - Date Object - ex02.ts
 
 - a) Create the current date and make an output to the console. 
 - b) Try to format the date with the function `.toLocaleDateString()`. Unfortunately it doesn't work. 
