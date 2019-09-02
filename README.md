@@ -115,9 +115,9 @@ Press the compile button in the TypeScript tool window. You can recognize that a
 <br/>
 
 
-# Exercises
+# Exercises - Task#00 - Task#05
 
-## Preparation
+## Task#00 - Preparation
 
 Create a folder `src/ex` and create in the folder 5 files like `ex01.ts`, `ex02.ts`, `ex03.ts`, `ex04.ts`, `ex05.ts`.  
 Each file shall contain a function like:
@@ -171,7 +171,7 @@ function run() {
 }
 ```
 
-## Exercise 1 - Fruit salad
+## Task#01 - Object, Fat Arrow, Functions - Fruit salad
 
 ### a) Create a fruit salad object
 
@@ -238,7 +238,7 @@ Iterate through the array members with:
     });
 ```
 
-## Exercise 2 - Date - ex02.ts
+## Task#01 - Date Object - ex02.ts
 
 - a) Create the current date and make an output to the console. 
 - b) Try to format the date with the function `.toLocaleDateString()`. Unfortunately it doesn't work. 
@@ -256,7 +256,7 @@ Try to use moment to format the date:
 
 Output the result to the console.
 
-## Exercise 3 - Higher order functions - ex03.ts
+## Task#03 - Higher order functions - ex03.ts
 
 ### a) Create a function which accepts a function as an argument
 
@@ -299,7 +299,76 @@ Create the anonymous functions:
 ```
 
 
-## Exercise 4 - Promises - ex04.ts
+## Task#04 - Promises - ex04.ts
 
+### a) Create a Promise
 
-## Exercise 5 - RxJS - ex05.ts
+Create a Promise function `getRandomPromise()`, which returns a `Promise` with a random number. 
+Create a random number between 1 and 10. If the random number is smaller than 5,
+the Promise should `resolve`, else (larger than 5) `reject`. The `Promise` shall use the
+`timeout` function to wait the random number * 20 in milliseconds before the return. 
+The return value is the random number.
+
+You can use the following function to create a random:
+
+```typescript
+    function randomIntFromInterval(min, max): number { // min and max included
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+```
+
+### b) Call the Promise
+
+Call the  `getRandomPromise()` and write the result of the resolve and reject to the console.
+
+### c) Call the Promise 100 times
+
+Call the  `getRandomPromise()` 100 times. Calculate the average of all resolves and write it
+to the console. 
+
+## Task#05 - RxJS - ex05.ts
+
+Use `npm install rxjs --save` to get the library.
+
+### a) Create an Observable
+
+Create an anonymous function `observable`, which returns an `Observable` object with allows to subscribe an 
+`Observer` with a type string. 
+
+```typescript
+   let observable = new Observable((observer:Observer<string>) => { ...
+```
+
+The Observer shall get 2 strings:
+
+- Hello
+- Hello Again
+
+You can use the function `oberserver.next(..)` and at the end the function `oberserver.complete(..)`.
+
+### b) Use the pipe method and the map operator (pipeToLowerCase)
+
+Create a function `pipeToLowerCase`, which accepts the `observable` as an argument:
+
+```typescript
+function pipeToLowerCase(observable: Observable<string>) { ... }
+```
+
+Use the pipe method and the map operator to convert the stream to lower case. Then subscribe it and
+output the result to the console.
+
+### c) Call the pipeToLowerCase
+
+Call the function pipeToLowerCase and provide the observable function.
+
+```typescript
+export function ex05() {
+    pipeToLowerCase(observable);
+    console.log('end of ex05 result');
+}
+
+```
+
+### d) Use the pipe method and the map operator (pipeToUpperCase)
+
+Do the same like at b) but for upper case.
