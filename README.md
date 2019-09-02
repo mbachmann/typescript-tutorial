@@ -119,7 +119,7 @@ Press the compile button in the TypeScript tool window. You can recognize that a
 
 ## Preparation
 
-Create a folder `src/ex` and create in the folder 3 files like `ex01.ts`, `ex02.ts`, `ex03.ts`.  
+Create a folder `src/ex` and create in the folder 5 files like `ex01.ts`, `ex02.ts`, `ex03.ts`, `ex04.ts`, `ex05.ts`.  
 Each file shall contain a function like:
 
 File `ex01.ts`:
@@ -147,6 +147,8 @@ export function ex03() {
 }
 ```
 
+... and so on for the other 2 files.
+
 Create a file `ex-run.ts` in the root folder (like 00-run.ts). Start the ts-node
 transpiler with `npm run tsc`. 
 
@@ -156,13 +158,16 @@ Create a function run:
 import {ex01} from './src/ex/ex01';
 import {ex02} from './src/ex/ex02';
 import {ex03} from './src/ex/ex03';
-
+import {ex04} from './src/ex/ex04';
+import {ex05} from './src/ex/ex05';
 run();
 
 function run() {
     ex01();
     ex02();
     ex03();
+    ex04();
+    ex05();
 }
 ```
 
@@ -170,10 +175,131 @@ function run() {
 
 ### a) Create a fruit salad object
 
-### b) Create a fruit salad object
+Create a fruit salad object with the name:
+
+```typescript
+let fruitSalad = {};
+```
+
+The fruit salad consists of the attributes apple, pear and kiwi. Each attribute
+shall contain a string like `I am an apple` or `I am a pear`. Make each attribute 
+visible to the console.
 
 
-## Exercise 2 - Date
+### b) Modify the attributes
 
-## Exercise 3 - Higher order functions
+Modify the attribute apple. The attribute shall contain a function, accepting an argument e.g. msg. 
+The function shall output to the console `'apple' + msg` and return a string `'return from apple'`. 
 
+Modify the attribute pear. The attribute shall contain a function, accepting no argument 
+The function shall output to the console `'pear'` and return a number `2`. 
+
+Call the attribute apple, pear and kiwi. Output the result to the console.
+
+### c) Create an interface IFruitSalad
+
+The interface `IFruitSalad` shall contain the attributes  apple, pear and kiwi. Use in the beginning
+the type `any`.
+
+```typescript
+let fruitSalad: IFruitSalad = { ..  .. .. ..};
+```
+
+Check if if compiles .. 
+
+Then modify the interface types to a more appropriate type. 
+
+
+### d) Modify kiwi to programmatically assign a function
+
+kiwi contains still string with the content `I am a kiwi`. Assign a function like:
+
+```typescript
+{
+    return 'i am now a new return from kiwi';
+};
+```
+
+Modify the type in the interface.
+
+### e) Create an array of fruitsalad
+
+The fruitsalad object shall be an array
+
+```typescript
+let fruitSalads: Array<IFruitSalad> = [{ ..  .. .. ..}];
+```
+
+Iterate through the array members with:
+
+```typescript
+    fruitSalads.forEach ((fruitSalad) => {
+        
+    });
+```
+
+## Exercise 2 - Date - ex02.ts
+
+- a) Create the current date and make an output to the console. 
+- b) Try to format the date with the function `.toLocaleDateString()`. Unfortunately it doesn't work. 
+- c) Use the date member functions `.getDate()`, `.getMonth()`, `.getFullYear()` to output a proper date
+- d) Install the moment library and @types/moment with `npm i moment --save` and `npm i @types/moment --save-dev`. Import the 
+library with `import * as moment from 'moment';`. 
+
+Try to use moment to format the date:
+```typescript
+    moment.locale('de');
+    // let value = "2019-09-04 10:00:00";
+    let value = "2019-09-04T10:00:00Z";
+    const dateLocale: moment.Moment = moment.utc(dateobj).local();
+```
+
+Output the result to the console.
+
+## Exercise 3 - Higher order functions - ex03.ts
+
+### a) Create a function which accepts a function as an argument
+
+Create a function `doubleF(n: number): number`. Return  `n * 2`.
+
+Create a function `halfF(n: number): number`. Return  `n / 2`.
+
+Create a function with the name `twoMoreF()`. This function accepts two arguments: a number and a calculate function. 
+`twoMoreF` calls itself the calculate function e.g. `doubleF` or `halfF`, and passes the number as argument to it. Then it adds 
+the constant `2` to the result of the calculate function. It returns the result to the caller.
+
+Call `twoMoreF()` and output the result to the console.
+
+```typescript
+   console.log("TWO MORE F", twoMoreF(4, halfF));
+```
+
+### b) Create a function which returns a function
+
+Create a function `getDoubleF()` with returns the function `doubleF`. Call the function with: 
+
+```typescript
+    console.log("TWO MORE F", twoMoreF(4, getDoubleF()));
+```
+
+### c) Convert all functions to anonymous functions
+
+Create the anonymous functions:
+
+- double()
+- half()
+- getDouble()
+- twoMore()
+
+... with the correct types. And call them!
+
+```typescript
+    console.log("TWO MORE", twoMore(4, getDouble()));
+    console.log("TWO MORE", twoMore(4, half));
+```
+
+
+## Exercise 4 - Promises - ex04.ts
+
+
+## Exercise 5 - RxJS - ex05.ts
