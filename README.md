@@ -115,3 +115,65 @@ Press the compile button in the TypeScript tool window. You can recognize that a
 <br/>
 
 
+# Exercises
+
+## Preparation
+
+Create a folder `src/ex` and create in the folder 3 files like `ex01.ts`, `ex02.ts`, `ex03.ts`.  
+Each file shall contain a function like:
+
+File `ex01.ts`:
+
+``` typescript
+
+export function ex01() {
+    
+}
+```
+File `ex02.ts`:
+
+``` typescript
+
+export function ex02() {
+    
+}
+```
+File `ex03.ts`:
+
+``` typescript
+
+export function ex03() {
+    
+}
+```
+
+Create a file `ex-run.ts` in the root folder (like 00-run.ts). Start the ts-node
+transpiler with `npm run tsc`. 
+
+Create a function run:
+
+``` typescript
+import {ex01} from './src/ex/ex01';
+import {ex02} from './src/ex/ex02';
+import {ex03} from './src/ex/ex03';
+
+run();
+
+function run() {
+    ex01();
+    ex02();
+    ex03();
+}
+```
+
+## Exercise 1 - Fruit salad
+
+### a) Create a fruit salad object
+
+### b) Create a fruit salad object
+
+
+## Exercise 2 - Date
+
+## Exercise 3 - Higher order functions
+
