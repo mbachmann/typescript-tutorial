@@ -46,8 +46,8 @@ export function decorators() {
 
     }
 
-    console.log(Number6['isRobot']); // ==> true
-    console.log(Number6['roboName']); // ==> true
+    console.log("isRobot: ", Number6['isRobot']); // ==> true
+    console.log("roboName: ", Number6['roboName']); // ==> Bender
 
 
     // --------------------------------------

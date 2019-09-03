@@ -16,11 +16,13 @@ export function classes () {
     class Person {
         bornOn: Date;
 
-        constructor(public name: string) {
+        constructor(private name: string) {
             this.bornOn = new Date();
         }
 
-        shout(): void {}
+        shout(): void {
+            this.name = 'Hello';
+        }
     }
 
     // --------------------------------------
@@ -30,7 +32,8 @@ export function classes () {
     class Person2 {
         bornOn: Date; // public by default
         public name: string;
-        private weight: number;
+        private _weight: number;
+        get weight1(): number {return this._weight};
     }
 
 

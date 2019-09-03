@@ -22,21 +22,22 @@ export function functions(){
     let fn1= function() {
         window.alert('Hello JavaScript');
     };
+
     fn1['foo'] = 'bar';
     fn1['zhaw'] = 'ase';
     console.log (fn1);
 
     // --------------------------------------
     // JavaScript has both, named and anonymous functions.
-    function namedFunction() {
+    function namedFunction(a) {
         console.log('named function');
     }
-    let anonymousFunction = function() {
+    let anonymousFunction = function(a) {
         console.log('anonymous function.')
-    }
+    };
 
-    namedFunction();
-    anonymousFunction();
+    namedFunction(1);
+    anonymousFunction(1);
 
     // --------------------------------------
     // Add types to functions arguments and return values
@@ -85,7 +86,7 @@ export function functions(){
     // --------------------------------------
     // fat arrow
     // Implicit return without a block
-    const square = n => n * n;
+    const square = (n) => n * n;
     // var square = function (n) { return n * n; };
     console.log(square(2));
 

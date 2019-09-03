@@ -222,7 +222,7 @@ kiwi contains still string with the content `I am a kiwi`. Assign a function lik
 
 Modify the type in the interface.
 
-### e) Create an array of fruitsalad
+### e) Create an array of fruitSalads
 
 The fruitsalad object shall be an array
 
