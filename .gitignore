@@ -8,8 +8,8 @@
 /src/test/javascript/PhantomJS*/
 
 
-/src/*.js
-/src/*.js.map
+/**/*.js
+/**/*.js.map
 00-run*.js
 00-run*.map
 ######################
