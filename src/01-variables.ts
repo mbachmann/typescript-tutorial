@@ -2,20 +2,17 @@
  * Created by MBach on 14.03.2017.
  */
 
-
-export function variables () {
+export function variables(): void {
 
     console.log('\n--------------------------------------');
     console.log('variables');
     console.log('--------------------------------------');
 
-
     // --------------------------------------
     // Variables - Declaration
-    var value;
+    let value;
     const pi = 3.1416;
     let $value__123;
-
 
     // --------------------------------------
     // Variables - Fun fact
@@ -25,17 +22,17 @@ export function variables () {
 
     // --------------------------------------
     // Variables - hold the result of an expression
-    let todayIs = 'Today is: ';
+    const todayIs = 'Today is: ';
 
-    let helloFunction = function () {
+    const helloFunction = function(): string {
         return todayIs;
     };
 
-    let returnValue = getCurrentDate();
+    const returnValue: Date = getCurrentDate();
 
-    console.log(helloFunction() + " " + returnValue);
+    console.log(helloFunction() + ' ' + returnValue);
 
-    function getCurrentDate() {
+    function getCurrentDate(): Date {
         return new Date();
     }
 
@@ -51,13 +48,13 @@ export function variables () {
     // --------------------------------------
     // Variables - Object types - Call by reference
     {
-        let a = [1, 2, 3];
-        let b = a;  // Copy the reference
+        // tslint:disable-next-line:no-shadowed-variable
+        const a: number[] = [1, 2, 3];
+        const b: number[] = a;  // Copy the reference
         a[0] = 99;  // Modify the array using the reference
 
         console.log(b);
         // => [99,2,3]
     }
-
 
 }

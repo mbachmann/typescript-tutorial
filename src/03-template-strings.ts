@@ -2,13 +2,11 @@
  * Created by MBach on 14.03.2017.
  */
 
-export function templateStrings() {
-
+export function templateStrings(): void {
 
     console.log('\n--------------------------------------');
     console.log('templateStrings');
     console.log('--------------------------------------');
-
 
     // --------------------------------------
     // Strings – Template string
@@ -18,7 +16,7 @@ export function templateStrings() {
     console.log(temp);
 
     const multiLine = `Multi-line:
-                       My name 
+                       My name
                        is ${name}`;
     console.log(multiLine);
 

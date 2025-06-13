@@ -3,7 +3,7 @@
  */
 
 
-export function higherOrderFunctions () {
+export function higherOrderFunctions (): void {
 
     console.log('\n--------------------------------------');
     console.log('higherOrderFunctions');
@@ -18,20 +18,20 @@ export function higherOrderFunctions () {
     // Higher Order Functions
     // 2. Function that return a function
 
-    let createAdder = function() {
+    const createAdder = function() {
         return function(a, b) {
             return a + b;
         };
     };
 
     console.log(createAdder()(2, 3));
-    let myAdder = createAdder();
+    const myAdder = createAdder();
     console.log(myAdder(2, 3));
 
     // not higher order
-    let testFatArrow = (a,b) => {
+    const testFatArrow = (a,b) => {
         return a + b;
-    }
+    };
 
     console.log(testFatArrow(2, 3));
 

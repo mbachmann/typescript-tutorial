@@ -4,7 +4,7 @@ import {log, logClass, logMethod, logProperty} from "./11-decorators-loggers";
  */
 
 
-export function decorators() {
+export function decorators(): void {
 
     console.log('\n--------------------------------------');
     console.log('decorators');
@@ -15,9 +15,8 @@ export function decorators() {
      * Decorator function tor ES5
      * The constructor function is can be notated as class
      * @param target
-     * @constructor
      */
-    function Robot(target) {
+    function Robot(target): void {
         target.isRobot = true;
     }
 
@@ -35,10 +34,10 @@ export function decorators() {
      * @constructor
      */
     function MyRobot(roboName) {
-        return function(target) {
+        return function(target: any): void {
             target.roboName = roboName;
             target.isRobot = true;
-        }
+        };
     }
 
     @MyRobot('Bender')
@@ -55,13 +54,13 @@ export function decorators() {
     // decorator
     function addAndCall(cb: Function, newField: string) {
         // cb is now available in the decorator
-        return function (ctor: Function): void {
+        return function(ctor: Function): void {
 
             Object.defineProperty(ctor.prototype, newField, {
                 value: function (...args: any[]) {
                     return Object.defineProperty(this, newField, {
 
-                        value: function (...args: any[]) {
+                        value: function(...args: any[]) {
                             console.log(newField, ...args);
                         }
 
@@ -73,7 +72,7 @@ export function decorators() {
     }
 
     // define a logger as a function
-    let callMe = (decoratedCtor) => console.log(decoratedCtor);
+    const callMe = (decoratedCtor) => console.log(decoratedCtor);
     // the decorator gets callMe as a logger function and a new property as myNewProperty
     @addAndCall(callMe, `myNewMethod`)
     class AddToMe {
@@ -83,7 +82,7 @@ export function decorators() {
 
     // we can assign to the myNewProperty values
     (<any>addToMe).myNewMethod(1, 2);
-    let info = {name:'zhaw', city:'zurich'};
+    const info = {name: 'zhaw', city:'zurich'};
     addToMe['myNewMethod'](info);
 
     // --------------------------------------
@@ -94,15 +93,15 @@ export function decorators() {
      */
     function classDecorator<T extends { new(...args: any[]): {} }>(constructor: T) {
         return class extends constructor {
-            newProperty = "new property";
-            hello = "override";
+            newProperty = 'new property';
+            hello = 'override';
 
         }
     }
 
     @classDecorator
     class Greeter {
-        property = "property";
+        property = 'property';
         hello: string;
 
         constructor(m: string) {
@@ -110,7 +109,7 @@ export function decorators() {
         }
     }
 
-    let greeter: Greeter = new Greeter("world");
+    const greeter: Greeter = new Greeter('world');
     console.log(greeter);
 
 
@@ -132,14 +131,13 @@ export function decorators() {
 
         @log
         public saySomething(something: string, somethingElse: string): string {
-            return this.name + " " + this.surname + " says: " + something + " " + somethingElse;
+            return this.name + ' ' + this.surname + ' says: ' + something + ' ' + somethingElse;
         }
 
     }
 
-    var p = new Person("Felix", "Muster");
-    p.saySomething("I love playing", "rock");
-    p.surname = "Mustermann";
-
+    const p = new Person('Felix', 'Muster');
+    p.saySomething('I love playing', 'rock');
+    p.surname = 'Mustermann';
 
 }

@@ -3,7 +3,7 @@
  */
 
 
-export function functions(){
+export function functions(): void{
 
 
     console.log('\n--------------------------------------');
@@ -12,14 +12,14 @@ export function functions(){
 
     // --------------------------------------
     // “First-class citizens”, functions are just expressions
-    let go = function() { alert('Hello JavaScript') };
+    const go = function(): void { alert('Hello JavaScript'); };
 
     console.log (go);
 
 
     // --------------------------------------
     // Functions are also objects
-    let fn1= function() {
+    const fn1= function(): void {
         window.alert('Hello JavaScript');
     };
     fn1['foo'] = 'bar';
@@ -28,12 +28,13 @@ export function functions(){
 
     // --------------------------------------
     // JavaScript has both, named and anonymous functions.
-    function namedFunction() {
+    function namedFunction(): void {
         console.log('named function');
     }
-    let anonymousFunction = function() {
-        console.log('anonymous function.')
-    }
+
+    const anonymousFunction = function(): void {
+        console.log('anonymous function.');
+    };
 
     namedFunction();
     anonymousFunction();
@@ -48,7 +49,7 @@ export function functions(){
 
     // --------------------------------------
     // Parameter can be optional. Use a question mark.
-    function buildName(firstName: string, lastName?: string) {
+    function buildName(firstName: string, lastName?: string): string {
         if (lastName) {
             return firstName + ' ' + lastName;
         } else {
@@ -56,24 +57,24 @@ export function functions(){
         }
     }
 
-    console.log(buildName('Felix') + "; " + buildName('Max', 'Mustermann'));
+    console.log(buildName('Felix') + '; ' + buildName('Max', 'Mustermann'));
 
 
     // --------------------------------------
     // Functions – Optional parameters
     // Function arguments can have defaults for arguments.
 
-    function buildName2(firstName: string, lastName = 'Muster') {
+    function buildName2(firstName: string, lastName = 'Muster'): string {
         // type Inference: lastName is a string
         return firstName + ' ' + lastName;
     }
     console.log(buildName2('Felix'));
 
-    //Functions – Rest/Spread parameter
+    // Functions – Rest/Spread parameter
     // An abitrary amout of parameters can be stored in an array.
-    function buildName3(firstName: string, ...restOfNames: string[]) {
+    function buildName3(firstName: string, ...restOfNames: string[]): string {
 
-        let allNames = [firstName, ...restOfNames];
+        const allNames = [firstName, ...restOfNames];
         // names = [firstName, restOfName[0], restOfName[1] ...]
 
         return allNames.join(' ');
@@ -85,7 +86,7 @@ export function functions(){
     // --------------------------------------
     // fat arrow
     // Implicit return without a block
-    const square = n => n * n;
+    const square = (n: number) => n * n;
     // var square = function (n) { return n * n; };
     console.log(square(2));
 
@@ -95,12 +96,12 @@ export function functions(){
     // Use braces around arguments if you have multiple parameters.
     const sum = (a, b) => a + b;
     // var sum = function (a, b) { return a + b; };
-    console.log(sum(2,3));
+    console.log(sum(2, 3));
 
 
     // --------------------------------------
     // Use curly braces and return if you have multiple lines
-    const even = n => {
+    const even = (n: number) => {
         const rest = n % 2;
         return rest === 0;
     };

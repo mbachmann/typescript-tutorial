@@ -14,13 +14,13 @@ export function classes () {
     // Class can have a constructor, attributes and methods.
 
     class Person {
-        bornOn: Date;
+        public bornOn: Date;
 
         constructor(public name: string) {
             this.bornOn = new Date();
         }
 
-        shout(): void {}
+        public shout(): void {}
     }
 
     // --------------------------------------
@@ -28,11 +28,10 @@ export function classes () {
     // Class attributes and methods can be public or private.
 
     class Person2 {
-        bornOn: Date; // public by default
+// public by default
         public name: string;
         private weight: number;
     }
-
 
     // Create new instances with the new keyword.
     const john = new Person('John');
@@ -53,8 +52,8 @@ export function classes () {
     }
 
     // Create new instances with the new keyword.
-    const felix = new Employee('Felix',10000);
+    const felix = new Employee('Felix', 10000);
 
-    console.log('Felix ' + felix.bornOn + ', '+ felix.salary); // => a Date object
+    console.log('Felix ' + felix.bornOn + ', ' + felix.salary); // => a Date object
 
 }

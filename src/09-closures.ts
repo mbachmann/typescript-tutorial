@@ -3,7 +3,7 @@
  */
 
 
-export function closures () {
+export function closures(): void {
 
     console.log('\n--------------------------------------');
     console.log('closures');
@@ -12,10 +12,10 @@ export function closures () {
     // --------------------------------------
     // Closures
 
-    let createFunction = function() {
-        let localVar = 123;
+    const createFunction = function(): () => number {
+        const localVar = 123;
 
-        return function() {
+        return function(): number {
             return localVar + 10;
         };
     };
@@ -24,17 +24,17 @@ export function closures () {
     // Closures
     // higher order functions and closures in combination
 
-    let addTen = createFunction();
+    const addTen = createFunction();
     console.log(addTen()); // 133
 
 
-    let createLogger = function(loggerName) {
-        return function(msg) {
+    const createLogger = function(loggerName: string): (msg: string) => void {
+        return function(msg: string): void {
             console.log('[' + loggerName + '] ' + msg);
         };
     };
 
-    let info = createLogger('INFO');
+    const info = createLogger('INFO');
 
     info('User successfully logged in!');
     // [INFO] User successfully logged in!

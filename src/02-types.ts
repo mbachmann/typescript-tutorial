@@ -2,8 +2,7 @@
  * Created by MBach on 14.03.2017.
  */
 
-export function types() {
-
+export function types(): void {
 
     console.log('\n--------------------------------------');
     console.log('types');
@@ -38,13 +37,13 @@ export function types() {
     // --------------------------------------
     // Variables with const
     const dateOfBirth = new Date();
-    //dateOfBirth = new Date(); // compile error!
+    // dateOfBirth = new Date(); // compile error!
 
     // --------------------------------------
     // const with objects
     const myObject = {
-        name: 'Florian' ,
-        dateOfBirth: '1985-08-04'
+        name: 'Florian',
+        dateOfBirth: '1985-08-04',
     };
 
     // Object is mutable!
@@ -52,6 +51,6 @@ export function types() {
 
     console.log(myObject);
     // but you cannot change the reference
-    //myObject = {name: 'Peter'}; // this throws an error!
+    // myObject = {name: 'Peter'}; // this throws an error!
 
 }

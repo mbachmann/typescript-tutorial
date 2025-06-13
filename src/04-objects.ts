@@ -18,7 +18,7 @@ export function objects () {
 
     // --------------------------------------
     // Objects - properties
-    let car = {
+    const car = {
         make: 'Ford',
         model: 'none'
     };
