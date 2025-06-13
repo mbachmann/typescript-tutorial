@@ -42,7 +42,7 @@ In the command window, change into this directory .
 
 Clone the git-Repo
 
-    git clone https://github.engineering.zhaw.ch/bacn/ase2-typescript-01
+    git clone https://github.com/mbachmann/typescript-tutorial
     cd ase2-typescript-01
 
 For npm-users:
